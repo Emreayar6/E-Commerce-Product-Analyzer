@@ -91,7 +91,7 @@ def getHepsiburadaRating(item):
 
 def getHepsiburadaPrice(barcode):
     response = requests.get(
-        'https://www.hepsiburada.com/ara?q={}&siralama=artanfiyat'.format(barcode), headers=headers)
+        'https://www.hepsiburada.com/ara?q={}'.format(barcode), headers=headers)
     html = response.text
     soup = BeautifulSoup(html, "lxml")
 
